@@ -1,0 +1,8 @@
+static libraries
+    gcc -o {output file(.o file)} -c {all .c library files} 
+    ar rcs {output static library file} {all .o files}
+
+dynmaic libraries
+    gcc -fPIC -c -Wall -Werror {all .c library files}
+    gcc -shared -o {output file(.so file)} {all .o library files}
+    gcc -L\{path to static libraries} -Wall -o {output executable file} main.c -{library filename }
