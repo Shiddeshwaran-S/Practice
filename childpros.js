@@ -15,5 +15,7 @@ process.on('message', (msg) => {
 
     process.disconnect();
 
+    console.log(process.arch);
+
     process.exit(0);
 });
