@@ -4,47 +4,37 @@ const device = mqttprotocol.device({
     clientId: 'DemoPC',
     host: 'af45gc5tdv54r-ats.iot.eu-north-1.amazonaws.com',
     port: 8883,
-    keyPath: './awskeys/AWS-private.pem.key',
-    certPath: './awskeys/AWS-certificate.pem.crt',
-    caPath: './awskeys/AmazonRootCA1.pem',
+    keyPath: 'D:/Training/Practice/MQTT/awskeys/AWS-private.pem.key',
+    certPath: 'D:/Training/Practice/MQTT/awskeys/AWS-certificate.pem.crt',
+    caPath: 'D:/Training/Practice/MQTT/awskeys/AmazonRootCA1.pem',
 });
 
 device.on('message', (topic, payload) => {
-    console.log('message', topic, payload.toString());
+    var data = JSON.parse(payload.toString());
+    console.log('message', topic, JSON.stringify(data));
+    device.end();
 });
-
-
 
 device.on('connect', () => {
     console.log('Connected to AWS IoT');
-    device.subscribe('$aws/things/DemoPC/shadow/update/accepted');
-    device.subscribe('$aws/things/DemoPC/shadow/get/accepted');
-    device.subscribe('$aws/things/DemoPC/shadow/get/rejected');
-    device.subscribe('$aws/things/DemoPC/shadow/update/rejected');
-    device.subscribe('$aws/things/DemoPC/shadow/update/delta');
-    device.subscribe('$aws/things/DemoPC/shadow/update/documents');
-    device.subscribe('$aws/things/DemoPC/shadow/delete/accepted');
-    device.subscribe('$aws/things/DemoPC/shadow/delete/rejected');
-    device.subscribe('$aws/things/DemoPC/shadow/delete/documents');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/update/accepted');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/get/accepted');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/get/rejected');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/update/rejected');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/update/delta');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/update/documents');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/delete/accepted');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/delete/rejected');
+    device.subscribe('$aws/things/DemoPC/shadow/name/test_shadow/delete/documents');
 });
 
-device.publish('$aws/things/DemoPC/shadow/get', JSON.stringify({
+device.publish('$aws/things/DemoPC/shadow/name/test_shadow/update', JSON.stringify({
     "state": { 
         "desired": { 
-            "welcome": "aws-iot", 
-            "1": "One", 
-            "2": "Two", 
-            "numeral": 1 
+            "welcome": "aws-it", 
         }, 
         "reported": { 
             "welcome": "aws-iot", 
-            "1": "Once", 
-            "2": "Twice" 
-        }, 
-        "delta": { 
-            "1": "One", 
-            "2": "Two", 
-            "numeral": 1 
-        }, 
+        },
     },
 }));
