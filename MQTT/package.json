@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "aws-iot-device-sdk": "^2.2.12"
+    "aws-iot-device-sdk": "^2.2.12",
+    "mqtt": "^4.3.7"
   },
   "name": "mqtt",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
