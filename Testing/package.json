@@ -1,8 +1,15 @@
 {
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test.js",
+    "test-with-coverage": "nyc --reporter=text mocha ./test.js",
+    "coverage": "nyc --reporter=html --reporter=json-summary --check-coverage=true npm run test",
+    "pretest": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:summary": "eslint --format summary-chart ./"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.32.2",
     "mocha": "^10.2.0"
   },
   "name": "testing",
@@ -69,6 +76,7 @@
     "require-directory": "^2.1.1",
     "safe-buffer": "^5.2.1",
     "serialize-javascript": "^6.0.0",
+    "sinon": "^15.0.3",
     "string-width": "^4.2.3",
     "strip-ansi": "^6.0.1",
     "strip-json-comments": "^3.1.1",
