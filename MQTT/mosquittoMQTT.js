@@ -8,8 +8,13 @@ const options = {
     // key: Buffer.from(readFileSync('./awskeys/moq/client.key')),
     keepalive: 900,
     connectTimeout: 10 * 1000,
+<<<<<<< HEAD
     // username: 'valli',
     // password: '12345',
+=======
+    //username: 'valli',
+    //password: '12345',
+>>>>>>> afda740112b68c3bf5f0cb5104eb90857d7c5b94
     protocol: 'mqtt',
     port: 1883,
     clean: false,
