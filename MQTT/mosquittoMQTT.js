@@ -36,20 +36,20 @@ client.on('offline', () => {
 });
 
 client.on('error', (err) => {
-    console.log("******* ERROR *******", err)
+    console.log("******* ERROR *******\n", err)
 });
 
 client.on('close', function (err) {
-    console.log("******* CLOSE EVENT *********")
+    console.log("******* CLOSE EVENT *********\n")
 });
 
 function subscribe() {
     if (client.connected) {
         client.subscribe('smarthome/hall/door', { qos: 0 }, (err, value) => {
             if (err)
-                console.log("****** ERROR IN SUBSCRIBE ******", err)
+                console.log("****** ERROR IN SUBSCRIBE ******\n", err)
             else
-                console.log("****** SUBSCRIPTION SUCCESSFUL *******", value)
+                console.log("****** SUBSCRIPTION SUCCESSFUL *******\n", value)
         })
     }
 };
@@ -58,9 +58,9 @@ function publish() {
     if (client.connected) {
         client.publish('smarthome/hall/door', '{"status":"locked"}', { qos: 0, retain: true}, (err) => {
             if (err)
-                console.log("****** ERROR IN PUBLISH ******", err)
+                console.log("****** ERROR IN PUBLISH ******\n", err)
             else
-                console.log("****** PUBLISH SUCCESSFUL *****")
+                console.log("****** PUBLISH SUCCESSFUL *****\n")
         })
     }
 };
