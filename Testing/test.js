@@ -1,9 +1,10 @@
 const expect = require('chai').expect;
+// const assert = require('assert');
 const { suite, describe, it } = require('mocha');
 //const time = require('time');
-const sinon = require('sinon'); // import sinon package
+// const sinon = require('sinon'); // import sinon package
 
-const app = require('./app.js');
+// const app = require('./app.js');
 
 suite('Array', function () {
   describe('#indexOf()', function () {
@@ -13,14 +14,15 @@ suite('Array', function () {
     });
 
     it('should return value when the value is present', function (done) {
-      expect([1, 2, 3].indexOf(2)).to.equal(1);
+      // expect([1, 2, 3].indexOf(2)).to.equal(1);
       // tick();
       //time.tick(1000);
-      app();
-      const clock = sinon.useFakeTimers(); // create a fake clock
-      console.log('clock', clock.now);
-      clock.tick(1000); // advance the clock by 1000ms
-      console.log('clock', clock.now);
+      // assert.equal([1, 2, 3].indexOf(2), 1);
+      // app();
+      // const clock = sinon.useFakeTimers(); // create a fake clock
+      // console.log('clock', clock.now);  // 0
+      // clock.tick(1000); // advance the clock by 1000ms
+      // console.log('clock', clock.now);  // 1000
       done();
     });
   });

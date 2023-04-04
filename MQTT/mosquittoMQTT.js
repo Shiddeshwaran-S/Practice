@@ -4,15 +4,15 @@ const fs = require('fs')
 const options = {
     clientId: 'test-client-1',
     // caCert: Buffer.from(readFileSync('./awskeys/moq/client.crt')),
-    cert: Buffer.from(readFileSync('./awskeys/moq/client.crt')),
-    key: Buffer.from(readFileSync('./awskeys/moq/client.key')),
+    // cert: Buffer.from(readFileSync('./awskeys/moq/client.crt')),
+    // key: Buffer.from(readFileSync('./awskeys/moq/client.key')),
     keepalive: 900,
     connectTimeout: 10 * 1000,
-    username: 'valli',
-    password: '12345',
+    // username: 'valli',
+    // password: '12345',
     protocol: 'mqtt',
     port: 1883,
-    clean: true,
+    clean: false,
     rejectUnauthorized: false,
 };
 
@@ -21,7 +21,7 @@ const client = mqtt.connect("mqtt://test.mosquitto.org", options);
 client.on('connect', () => {
     console.log("****** CONNECTION ESTABLISHED :", client.connected, "********")
     subscribe()
-    publish()
+    // publish()
 });
 
 client.on('message', (topic, msg, pkt) => {
@@ -56,7 +56,7 @@ function subscribe() {
 
 function publish() {
     if (client.connected) {
-        client.publish('smarthome/hall/door', '{"status":"locked"}', { qos: 0 }, (err) => {
+        client.publish('smarthome/hall/door', '{"status":"locked"}', { qos: 0, retain: true}, (err) => {
             if (err)
                 console.log("****** ERROR IN PUBLISH ******", err)
             else
