@@ -22,3 +22,5 @@ function secondAction() {
 }
 
 firstAction(secondAction);
+
+
