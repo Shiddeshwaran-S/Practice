@@ -2,7 +2,7 @@ const mqtt = require('mqtt')
 const fs = require('fs')
 
 const options = {
-    clientId: 'test-client-1',
+    clientId: 'test-client-3',
     // caCert: Buffer.from(readFileSync('./awskeys/moq/client.crt')),
     // cert: Buffer.from(readFileSync('./awskeys/moq/client.crt')),
     // key: Buffer.from(readFileSync('./awskeys/moq/client.key')),
@@ -12,7 +12,7 @@ const options = {
     //password: '12345',
     protocol: 'mqtt',
     port: 1883,
-    clean: false,
+    clean: true,
     rejectUnauthorized: false,
 };
 
@@ -21,14 +21,14 @@ const client = mqtt.connect("mqtt://test.mosquitto.org", options);
 client.on('connect', () => {
     console.log("****** CONNECTION ESTABLISHED :", client.connected, "********")
     subscribe()
-    // publish()
+    publish()
 });
 
 client.on('message', (topic, msg, pkt) => {
     console.log("*********  MESSAGE RECEIVED **********")
     console.log("TOPIC:", topic)
     console.log("MESSAGE:", JSON.parse(unravel(msg)))
-    //console.log("PACKET:", pkt)
+    // console.log("PACKET:", pkt)
 });
 
 client.on('offline', () => {
@@ -45,7 +45,7 @@ client.on('close', function (err) {
 
 function subscribe() {
     if (client.connected) {
-        client.subscribe('smarthome/hall/door', { qos: 0 }, (err, value) => {
+        client.subscribe('smarthome/hall/door', { qos: 1 }, (err, value) => {
             if (err)
                 console.log("****** ERROR IN SUBSCRIBE ******\n", err)
             else
@@ -56,7 +56,7 @@ function subscribe() {
 
 function publish() {
     if (client.connected) {
-        client.publish('smarthome/hall/door', '{"status":"locked"}', { qos: 0, retain: true}, (err) => {
+        client.publish('smarthome/hall/door', '{"status":"locked"}', { qos: 1}, (err) => {
             if (err)
                 console.log("****** ERROR IN PUBLISH ******\n", err)
             else

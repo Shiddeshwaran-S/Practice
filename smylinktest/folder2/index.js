@@ -1,0 +1,1 @@
+/home/rently/VScode/personal/Practice/smylinktest/index.js

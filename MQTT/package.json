@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "aws-iot-device-sdk": "^2.2.12",
-    "mqtt": "^4.3.7"
+    "mqtt": "^4.3.7",
+    "tls": "0.0.1"
   },
   "name": "mqtt",
   "version": "1.0.0",

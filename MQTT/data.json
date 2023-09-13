@@ -1,0 +1,1810 @@
+{
+  "message1$aws/things/37220/shadow/update/documents": {
+    "previous": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {}
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169123 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {}
+        }
+      },
+      "version": 88100
+    },
+    "current": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {
+            "scanDeviceReport": ["78:02:B7:41:E6:B7", -93, 0, 0, 230]
+          },
+          "updateTime": "2023-06-19T10:10:23.134Z"
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169423 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {
+            "scanDeviceReport": [
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 }
+            ]
+          },
+          "updateTime": { "timestamp": 1687169423 }
+        }
+      },
+      "version": 88101
+    },
+    "timestamp": 1687169423,
+    "clientToken": "37220-168"
+  },
+  "message2$aws/things/37220/shadow/update/accepted": {
+    "state": {
+      "reported": {
+        "thing_name": "37220",
+        "notification": {
+          "scanDeviceReport": ["78:02:B7:41:E6:B7", -93, 0, 0, 230]
+        },
+        "updateTime": "2023-06-19T10:10:23.134Z"
+      }
+    },
+    "metadata": {
+      "reported": {
+        "thing_name": { "timestamp": 1687169423 },
+        "notification": {
+          "scanDeviceReport": [
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 }
+          ]
+        },
+        "updateTime": { "timestamp": 1687169423 }
+      }
+    },
+    "version": 88101,
+    "timestamp": 1687169423,
+    "clientToken": "37220-168"
+  },
+  "message3 $aws/things/37220/shadow/update/documents": {
+    "previous": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {
+            "scanDeviceReport": ["78:02:B7:41:E6:B7", -93, 0, 0, 230]
+          },
+          "updateTime": "2023-06-19T10:10:23.134Z"
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169423 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {
+            "scanDeviceReport": [
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 }
+            ]
+          },
+          "updateTime": { "timestamp": 1687169423 }
+        }
+      },
+      "version": 88101
+    },
+    "current": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {
+            "scanDeviceReport": ["D3:26:1D:81:45:24", -100, 0, 0, 69]
+          },
+          "updateTime": "2023-06-19T10:10:23.142Z"
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169423 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {
+            "scanDeviceReport": [
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 }
+            ]
+          },
+          "updateTime": { "timestamp": 1687169423 }
+        }
+      },
+      "version": 88102
+    },
+    "timestamp": 1687169423,
+    "clientToken": "37220-169"
+  },
+  "message4 $aws/things/37220/shadow/update/accepted": {
+    "state": {
+      "reported": {
+        "thing_name": "37220",
+        "notification": {
+          "scanDeviceReport": ["D3:26:1D:81:45:24", -100, 0, 0, 69]
+        },
+        "updateTime": "2023-06-19T10:10:23.142Z"
+      }
+    },
+    "metadata": {
+      "reported": {
+        "thing_name": { "timestamp": 1687169423 },
+        "notification": {
+          "scanDeviceReport": [
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 },
+            { "timestamp": 1687169423 }
+          ]
+        },
+        "updateTime": { "timestamp": 1687169423 }
+      }
+    },
+    "version": 88102,
+    "timestamp": 1687169423,
+    "clientToken": "37220-169"
+  },
+  "message5 $aws/things/37220/shadow/update/documents": {
+    "previous": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {
+            "scanDeviceReport": ["D3:26:1D:81:45:24", -100, 0, 0, 69]
+          },
+          "updateTime": "2023-06-19T10:10:23.142Z"
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169423 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {
+            "scanDeviceReport": [
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 },
+              { "timestamp": 1687169423 }
+            ]
+          },
+          "updateTime": { "timestamp": 1687169423 }
+        }
+      },
+      "version": 88102
+    },
+    "current": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {}
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169423 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {}
+        }
+      },
+      "version": 88103
+    },
+    "timestamp": 1687169424
+  },
+  "messag6 $aws/things/37220/shadow/update/accepted": {
+    "state": {
+      "reported": {
+        "notification": { "scanDeviceReport": null },
+        "updateTime": null
+      }
+    },
+    "metadata": {
+      "reported": {
+        "notification": { "scanDeviceReport": { "timestamp": 1687169424 } },
+        "updateTime": { "timestamp": 1687169424 }
+      }
+    },
+    "version": 88103,
+    "timestamp": 1687169424
+  },
+  "message7 $aws/things/37220/shadow/update/documents": {
+    "previous": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {}
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169423 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {}
+        }
+      },
+      "version": 88103
+    },
+    "current": {
+      "state": {
+        "desired": {
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out"
+          },
+          "thing_name": "37220"
+        },
+        "reported": {
+          "thing_name": "37220",
+          "settings": {
+            "type": "hub",
+            "hub_id": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "wifi_ssid": "",
+            "wifi_password": "",
+            "disableBlacklistCodes": false,
+            "apn": "",
+            "rently_batch_code_duration": 120,
+            "time_zone": "Asia/Kolkata",
+            "rules": {
+              "3": { "1": { "cool": "78", "heat": "75" } },
+              "4": { "1": { "heat": "60" } },
+              "5": { "1": { "cool": "86", "humidity": "80" } },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": "84",
+                  "heat": "71",
+                  "mode": "on",
+                  "timeout": "7200"
+                }
+              },
+              "16": { "15": { "autoReLockV4": "1, 120" } }
+            },
+            "agingTest": "disable",
+            "disarm_time": 1687157697506,
+            "max_ui_slots": 10,
+            "partition_key": "7dd85127-a417-429e-bd90-22ece1287d74",
+            "bletoken": "OyGxbfVt-pdY1RowOOENSd0V4IPLGrJ3Los8jFiYWZc",
+            "sensors": "enable",
+            "devices": ["37220-721fbe04-6b7e-4024-a812-d87ff2f44c63"],
+            "schedule": "",
+            "monitoring": "arm_out",
+            "lastLockConfigCheckTimestamp": 1687157797242
+          },
+          "status": {
+            "board_type": "V3",
+            "model": "sim7500a",
+            "HWSerialNo": "0022f4ed2056-1651668380868589535448480980d1ee",
+            "fwVer": "2.8.0.5",
+            "network_type": "wifi",
+            "virtualNodes": 4,
+            "lastRefreshDate": "2023-06-19T06:56:07.139Z",
+            "heartBeat": "2023-06-19T09:55:27.179Z",
+            "serialSsh": true,
+            "signal_strength": "-68"
+          },
+          "notification": {}
+        }
+      },
+      "metadata": {
+        "desired": {
+          "settings": {
+            "type": { "timestamp": 1687157697 },
+            "hub_id": { "timestamp": 1687157697 },
+            "wifi_ssid": { "timestamp": 1687157697 },
+            "wifi_password": { "timestamp": 1687157697 },
+            "disableBlacklistCodes": { "timestamp": 1687157697 },
+            "apn": { "timestamp": 1687157697 },
+            "rently_batch_code_duration": { "timestamp": 1687157697 },
+            "time_zone": { "timestamp": 1687157700 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157742 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "humidity": { "timestamp": 1687157742 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157742 },
+                  "heat": { "timestamp": 1687157742 },
+                  "mode": { "timestamp": 1687157742 },
+                  "timeout": { "timestamp": 1687157742 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157697 },
+            "disarm_time": { "timestamp": 1687157697 },
+            "max_ui_slots": { "timestamp": 1687157697 },
+            "partition_key": { "timestamp": 1687157700 },
+            "bletoken": { "timestamp": 1687157700 },
+            "sensors": { "timestamp": 1687157700 },
+            "devices": [{ "timestamp": 1687158253 }],
+            "schedule": { "timestamp": 1687157701 },
+            "monitoring": { "timestamp": 1687157701 }
+          },
+          "thing_name": { "timestamp": 1687166988 }
+        },
+        "reported": {
+          "thing_name": { "timestamp": 1687169423 },
+          "settings": {
+            "type": { "timestamp": 1687157740 },
+            "hub_id": { "timestamp": 1687157740 },
+            "wifi_ssid": { "timestamp": 1687157740 },
+            "wifi_password": { "timestamp": 1687157740 },
+            "disableBlacklistCodes": { "timestamp": 1687157740 },
+            "apn": { "timestamp": 1687157740 },
+            "rently_batch_code_duration": { "timestamp": 1687157740 },
+            "time_zone": { "timestamp": 1687157740 },
+            "rules": {
+              "3": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "heat": { "timestamp": 1687157740 }
+                }
+              },
+              "4": { "1": { "heat": { "timestamp": 1687157740 } } },
+              "5": {
+                "1": {
+                  "cool": { "timestamp": 1687157740 },
+                  "humidity": { "timestamp": 1687157740 }
+                }
+              },
+              "7": {},
+              "10": {},
+              "15": {
+                "1": {
+                  "cool": { "timestamp": 1687157745 },
+                  "heat": { "timestamp": 1687157745 },
+                  "mode": { "timestamp": 1687157745 },
+                  "timeout": { "timestamp": 1687157745 }
+                }
+              },
+              "16": { "15": { "autoReLockV4": { "timestamp": 1687166988 } } }
+            },
+            "agingTest": { "timestamp": 1687157740 },
+            "disarm_time": { "timestamp": 1687157740 },
+            "max_ui_slots": { "timestamp": 1687157740 },
+            "partition_key": { "timestamp": 1687157740 },
+            "bletoken": { "timestamp": 1687157740 },
+            "sensors": { "timestamp": 1687157740 },
+            "devices": [{ "timestamp": 1687158255 }],
+            "schedule": { "timestamp": 1687157740 },
+            "monitoring": { "timestamp": 1687157740 },
+            "lastLockConfigCheckTimestamp": { "timestamp": 1687157797 }
+          },
+          "status": {
+            "board_type": { "timestamp": 1687157740 },
+            "model": { "timestamp": 1687157740 },
+            "HWSerialNo": { "timestamp": 1687157741 },
+            "fwVer": { "timestamp": 1687157741 },
+            "network_type": { "timestamp": 1687158631 },
+            "virtualNodes": { "timestamp": 1687157742 },
+            "lastRefreshDate": { "timestamp": 1687157768 },
+            "heartBeat": { "timestamp": 1687168527 },
+            "serialSsh": { "timestamp": 1687157768 },
+            "signal_strength": { "timestamp": 1687166727 }
+          },
+          "notification": {}
+        }
+      },
+      "version": 88104
+    },
+    "timestamp": 1687169424
+  },
+  "messag8 $aws/things/37220/shadow/update/accepted": {
+    "state": {
+      "reported": {
+        "notification": { "scanDeviceReport": null },
+        "updateTime": null
+      }
+    },
+    "metadata": {
+      "reported": {
+        "notification": { "scanDeviceReport": { "timestamp": 1687169424 } },
+        "updateTime": { "timestamp": 1687169424 }
+      }
+    },
+    "version": 88104,
+    "timestamp": 1687169424
+  }
+}
