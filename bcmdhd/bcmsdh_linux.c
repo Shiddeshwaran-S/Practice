@@ -1,14 +1,14 @@
 /*
  * SDIO access interface for drivers - linux specific (pci only)
  *
- * Copyright (C) 1999-2017, Broadcom Corporation
- * 
+ * Copyright (C) 2020, Broadcom.
+ *
  *      Unless you and Broadcom execute a separate written software license
  * agreement governing use of this software, this software is licensed to you
  * under the terms of the GNU General Public License version 2 (the "GPL"),
  * available at http://www.broadcom.com/licenses/GPLv2.php, with the
  * following added to such license:
- * 
+ *
  *      As a special exception, the copyright holders of this software give you
  * permission to link this software with independent modules, and to copy and
  * distribute the resulting executable under terms of your choice, provided that
@@ -16,15 +16,11 @@
  * the license of that module.  An independent module is a module which is not
  * derived from this software.  The special exception does not apply to any
  * modifications of the software.
- * 
- *      Notwithstanding the above, under no circumstances may you combine this
- * software in any way with any other Broadcom software provided under a license
- * other than the GPL, without Broadcom's express prior written consent.
  *
  *
  * <<Broadcom-WL-IPTag/Open:>>
  *
- * $Id: bcmsdh_linux.c 672609 2016-11-29 07:00:46Z $
+ * $Id$
  */
 
 /**
@@ -84,8 +80,13 @@ typedef struct bcmsdh_os_info {
 } bcmsdh_os_info_t;
 
 /* debugging macros */
+#ifdef BCMDBG_ERR
 #define SDLX_ERR(x) printf x
-#define SDLX_MSG(x) printf x
+#define SDLX_MSG(x)	printf x
+#else
+#define SDLX_ERR(x) printf x
+#define SDLX_MSG(x)	printf x
+#endif /* BCMDBG_ERR */
 
 /**
  * Checks to see if vendor and device IDs match a supported SDIO Host Controller.
@@ -94,6 +95,23 @@ bool
 bcmsdh_chipmatch(uint16 vendor, uint16 device)
 {
 	/* Add other vendors and devices as required */
+#ifdef BCMINTERNAL
+#ifdef BCMSDIOH_BCM
+	if (device == SDIOH_FPGA_ID && vendor == VENDOR_BROADCOM) {
+		return (TRUE);
+	}
+	if (device == BCM_SDIOH_ID && vendor == VENDOR_BROADCOM) {
+		return (TRUE);
+	}
+	if (device == BCM4710_DEVICE_ID && vendor == VENDOR_BROADCOM) {
+		return (TRUE);
+	}
+	/* For now still accept the old devid */
+	if (device == 0x4380 && vendor == VENDOR_BROADCOM) {
+		return (TRUE);
+	}
+#endif /* BCMSDIOH_BCM */
+#endif /* BCMINTERNAL */
 
 #ifdef BCMSDIOH_STD
 	/* Check for Arasan host controller */
@@ -124,6 +142,12 @@ bcmsdh_chipmatch(uint16 vendor, uint16 device)
 		return (TRUE);
 	}
 
+#ifdef BCMINTERNAL
+	/* Check for Jinvani (C-Guys) host controller */
+	if (device == JINVANI_SDIOH_ID && vendor == VENDOR_JINVANI) {
+		return (TRUE);
+	}
+#endif /* BCMINTERNAL */
 #endif /* BCMSDIOH_STD */
 #ifdef BCMSDIOH_SPI
 	/* This is the PciSpiHost. */
@@ -132,8 +156,28 @@ bcmsdh_chipmatch(uint16 vendor, uint16 device)
 		return (TRUE);
 	}
 
+#ifdef BCMINTERNAL
+	/* This is the SPI Host for QT. */
+	if (device == BCM_SPIH_ID && vendor == VENDOR_BROADCOM) {
+		printf("Found SPI Host Controller\n");
+		return (TRUE);
+	}
+#endif /* BCMINTERNAL */
 #endif /* BCMSDIOH_SPI */
 
+#ifdef BCMINTERNAL
+	/*
+	 * XXX - This is a hack to get the GPL SdioLinux driver to load on Arasan/x86
+	 * This is accomplished by installing a PciSpiHost into the system alongside the
+	 * Arasan controller.  The PciSpiHost is just used to get BCMSDH loaded.
+	 */
+#ifdef BCMSDH_FD
+	if (device == SPIH_FPGA_ID && vendor == VENDOR_BROADCOM) {
+		printf("Found SdioLinux Host Controller\n");
+		return (TRUE);
+	}
+#endif /* BCMSDH_FD */
+#endif /* BCMINTERNAL */
 	return (FALSE);
 }
 
@@ -302,6 +346,12 @@ bcmsdh_unregister(void)
 	bcmsdh_unregister_client_driver();
 }
 
+void *bcmsdh_get_dev(bcmsdh_info_t *sdh)
+{
+	bcmsdh_os_info_t *bcmsdh_osinfo = sdh->os_cxt;
+	return bcmsdh_osinfo->dev;
+}
+
 void bcmsdh_dev_pm_stay_awake(bcmsdh_info_t *bcmsdh)
 {
 #if !defined(CONFIG_HAS_WAKELOCK) && (LINUX_VERSION_CODE > KERNEL_VERSION(2, 6, 36))
@@ -325,7 +375,14 @@ bool bcmsdh_dev_pm_enabled(bcmsdh_info_t *bcmsdh)
 	return bcmsdh_osinfo->dev_wake_enabled;
 }
 
-#if defined(OOB_INTR_ONLY)
+#if defined(OOB_INTR_ONLY) || defined(BCMSPI_ANDROID)
+int bcmsdh_get_oob_intr_num(bcmsdh_info_t *bcmsdh)
+{
+	bcmsdh_os_info_t *bcmsdh_osinfo = bcmsdh->os_cxt;
+
+	return bcmsdh_osinfo->oob_irq_num;
+}
+
 void bcmsdh_oob_intr_set(bcmsdh_info_t *bcmsdh, bool enable)
 {
 	unsigned long flags;
@@ -346,13 +403,26 @@ void bcmsdh_oob_intr_set(bcmsdh_info_t *bcmsdh, bool enable)
 	spin_unlock_irqrestore(&bcmsdh_osinfo->oob_irq_spinlock, flags);
 }
 
+#ifdef ENABLE_WAKEUP_PKT_DUMP
+extern volatile bool dhd_mmc_suspend;
+extern volatile bool dhd_mmc_wake;
+#endif /* ENABLE_WAKEUP_PKT_DUMP */
+
 static irqreturn_t wlan_oob_irq(int irq, void *dev_id)
 {
 	bcmsdh_info_t *bcmsdh = (bcmsdh_info_t *)dev_id;
 	bcmsdh_os_info_t *bcmsdh_osinfo = bcmsdh->os_cxt;
 
+#ifndef BCMSPI_ANDROID
 	bcmsdh_oob_intr_set(bcmsdh, FALSE);
+#endif /* !BCMSPI_ANDROID */
 	bcmsdh_osinfo->oob_irq_handler(bcmsdh_osinfo->oob_irq_handler_context);
+
+#ifdef ENABLE_WAKEUP_PKT_DUMP
+	if (dhd_mmc_suspend) {
+		dhd_mmc_wake = TRUE;
+	}
+#endif /* ENABLE_WAKEUP_PKT_DUMP */
 
 	return IRQ_HANDLED;
 }
@@ -396,11 +466,17 @@ int bcmsdh_oob_intr_register(bcmsdh_info_t *bcmsdh, bcmsdh_cb_fn_t oob_irq_handl
 	SDLX_MSG(("%s: disable_irq_wake\n", __FUNCTION__));
 	bcmsdh_osinfo->oob_irq_wake_enabled = FALSE;
 #else
-	err = enable_irq_wake(bcmsdh_osinfo->oob_irq_num);
-	if (err)
-		SDLX_ERR(("%s: enable_irq_wake failed with %d\n", __FUNCTION__, err));
-	else
-		bcmsdh_osinfo->oob_irq_wake_enabled = TRUE;
+#if defined(CONFIG_ARCH_RHEA) || defined(CONFIG_ARCH_CAPRI)
+	if (device_may_wakeup(bcmsdh_osinfo->dev)) {
+#endif /* CONFIG_ARCH_RHEA || CONFIG_ARCH_CAPRI */
+		err = enable_irq_wake(bcmsdh_osinfo->oob_irq_num);
+		if (err)
+			SDLX_ERR(("%s: enable_irq_wake failed with %d\n", __FUNCTION__, err));
+		else
+			bcmsdh_osinfo->oob_irq_wake_enabled = TRUE;
+#if defined(CONFIG_ARCH_RHEA) || defined(CONFIG_ARCH_CAPRI)
+	}
+#endif /* CONFIG_ARCH_RHEA || CONFIG_ARCH_CAPRI */
 #endif
 
 	return 0;
@@ -417,9 +493,15 @@ void bcmsdh_oob_intr_unregister(bcmsdh_info_t *bcmsdh)
 		return;
 	}
 	if (bcmsdh_osinfo->oob_irq_wake_enabled) {
-		err = disable_irq_wake(bcmsdh_osinfo->oob_irq_num);
-		if (!err)
-			bcmsdh_osinfo->oob_irq_wake_enabled = FALSE;
+#if defined(CONFIG_ARCH_RHEA) || defined(CONFIG_ARCH_CAPRI)
+		if (device_may_wakeup(bcmsdh_osinfo->dev)) {
+#endif /* CONFIG_ARCH_RHEA || CONFIG_ARCH_CAPRI */
+			err = disable_irq_wake(bcmsdh_osinfo->oob_irq_num);
+			if (!err)
+				bcmsdh_osinfo->oob_irq_wake_enabled = FALSE;
+#if defined(CONFIG_ARCH_RHEA) || defined(CONFIG_ARCH_CAPRI)
+		}
+#endif /* CONFIG_ARCH_RHEA || CONFIG_ARCH_CAPRI */
 	}
 	if (bcmsdh_osinfo->oob_irq_enabled) {
 		disable_irq(bcmsdh_osinfo->oob_irq_num);
@@ -428,9 +510,10 @@ void bcmsdh_oob_intr_unregister(bcmsdh_info_t *bcmsdh)
 	free_irq(bcmsdh_osinfo->oob_irq_num, bcmsdh);
 	bcmsdh_osinfo->oob_irq_registered = FALSE;
 }
-#endif
+#endif /* defined(OOB_INTR_ONLY) || defined(BCMSPI_ANDROID) */
 
 /* Module parameters specific to each host-controller driver */
+/* XXX Need to move these to where they really belong! */
 
 extern uint sd_msglevel;	/* Debug message level */
 module_param(sd_msglevel, uint, 0);
@@ -479,11 +562,11 @@ EXPORT_SYMBOL(bcmsdh_intr_disable);
 EXPORT_SYMBOL(bcmsdh_intr_reg);
 EXPORT_SYMBOL(bcmsdh_intr_dereg);
 
-#if defined(DHD_DEBUG)
+#if defined(DHD_DEBUG) || defined(BCMDBG)
 EXPORT_SYMBOL(bcmsdh_intr_pending);
 #endif
 
-#if defined(BT_OVER_SDIO)
+#if defined (BT_OVER_SDIO)
 EXPORT_SYMBOL(bcmsdh_btsdio_interface_init);
 #endif /* defined (BT_OVER_SDIO) */
 

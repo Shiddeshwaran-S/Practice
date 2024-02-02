@@ -7,14 +7,14 @@ config BCMDHD
 config BCMDHD_FW_PATH
 	depends on BCMDHD
 	string "Firmware path"
-	default "/lib/firmware/ap6212/fw_bcm43438a0.bin"
+	default "/system/etc/firmware/fw_bcmdhd.bin"
 	---help---
 	  Path to the firmware file.
 
 config BCMDHD_NVRAM_PATH
 	depends on BCMDHD
 	string "NVRAM path"
-	default "/lib/firmware/ap6212/nvram_ap6212.txt"
+	default "/system/etc/firmware/nvram.txt"
 	---help---
 	  Path to the calibration file.
 
@@ -40,4 +40,22 @@ config BCMDHD_PCIE
 config BCMDHD_USB
 		bool "USB bus interface support"
 		depends on BCMDHD && USB
+endchoice
+
+choice
+	depends on BCMDHD && BCMDHD_SDIO
+	prompt "Interrupt type"
+	---help---
+		Interrupt type
+config BCMDHD_OOB
+	depends on BCMDHD && BCMDHD_SDIO
+	bool "Out-of-Band Interrupt"
+	default y
+	---help---
+		Interrupt from WL_HOST_WAKE.
+config BCMDHD_SDIO_IRQ
+	depends on BCMDHD && BCMDHD_SDIO
+	bool "In-Band Interrupt"
+	---help---
+	  Interrupt from SDIO DAT[1]
 endchoice
