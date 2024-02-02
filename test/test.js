@@ -1,26 +1,21 @@
-const fs = require('fs');
+var list = [1,2,3];
 
-async function sample() {
-    const data = await new Promise((res) => {
-        fs.readFile('..\\Assignmet 6\\question-1.md', (err, data) => {
-            res(data);
-        });
-    });
-    console.log("async/await ",data);
+justAFunction = function () {
+  console.log(0," Hai");
+  let tmp = 1;
+
+  function innerfun() {
+    tmp += 1;
+    console.log(tmp);
+  }
+  
+  console.log("bye....");
+  innerfun();
+  return innerfun;
 }
 
-sample()
+const fun1 = justAFunction();
+const fun2 = justAFunction();
 
-
-function firstAction (cb) {
-    console.log("first action..")
-    cb();
-}
-
-function secondAction() {
-    console.log("second action..")
-}
-
-firstAction(secondAction);
-
-
+fun1()
+fun2()
