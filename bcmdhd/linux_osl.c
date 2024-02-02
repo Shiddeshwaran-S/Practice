@@ -40,7 +40,7 @@
 #include <linux/vmalloc.h>
 #include <pcicfg.h>
 #if (LINUX_VERSION_CODE <= KERNEL_VERSION(4, 8, 0))
-#include <linux/pci-dma-compat.h>
+#include <asm-generic/pci-dma-compat.h>
 #endif
 
 #if defined(BCMASSERT_LOG) && !defined(OEM_ANDROID)

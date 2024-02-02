@@ -27,7 +27,7 @@ CONFIG_BCMDHD_DEBUG := y
 #CONFIG_BCMDHD_ADAPTER_INDEX := 0
 
 CONFIG_MACH_PLATFORM := y
-CONFIG_BCMDHD_DTS := y
+#CONFIG_BCMDHD_DTS := y
 
 DHDCFLAGS = -Wall -Wstrict-prototypes -Wno-date-time                      \
 	-Dlinux -DLINUX -DBCMDRIVER                                           \
@@ -40,7 +40,6 @@ DHDCFLAGS = -Wall -Wstrict-prototypes -Wno-date-time                      \
 	-DMULTIPLE_SUPPLICANT -DTSQ_MULTIPLIER -DMFP -DDHD_8021X_DUMP         \
 	-DPOWERUP_MAX_RETRY=0 -DIFACE_HANG_FORCE_DEV_CLOSE -DWAIT_DEQUEUE     \
 	-DUSE_NEW_RSPEC_DEFS                                                  \
-	-DSET_CARRIER                                                         \
 	-DWL_EXT_IAPSTA -DWL_ESCAN -DCCODE_LIST -DSUSPEND_EVENT               \
 	-DKEY_INSTALL_CHECK                                                   \
 	-DENABLE_INSMOD_NO_FW_LOAD
@@ -86,7 +85,7 @@ ifneq ($(CONFIG_CFG80211),)
 	DHDCFLAGS += -DROAM_CHANNEL_CACHE -DDHD_LOSSLESS_ROAMING
 #	DHDCFLAGS += -DWL_CFGVENDOR_SEND_HANG_EVENT
 	DHDCFLAGS += -DGTK_OFFLOAD_SUPPORT
-	DHDCFLAGS += -DWL_STATIC_IF -DDHD_MAX_STATIC_IFS=2
+#	DHDCFLAGS += -DWL_STATIC_IF #-DDHD_MAX_STATIC_IFS=2
 #	DHDCFLAGS += -DWL_CLIENT_SAE
 	DHDCFLAGS += -DCONNECT_INFO_WAR -DWL_ROAM_WAR
 	DHDCFLAGS += -DVNDR_IE_WAR
@@ -418,15 +417,15 @@ all: bcmdhd_pcie bcmdhd_sdio bcmdhd_usb
 
 bcmdhd_pcie:
 	$(warning "building BCMDHD_PCIE..........")
-	$(MAKE) -C $(LINUXDIR) M=$(PWD) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) modules CONFIG_BCMDHD=m CONFIG_BCMDHD_PCIE=y CONFIG_BCMDHD_OOB=y
+	$(MAKE) -C $(LINUXDIR) M=$(PWD) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) modules CONFIG_BCMDHD=m
 
 bcmdhd_sdio:
 	$(warning "building BCMDHD_SDIO..........")
-	$(MAKE) -C $(LINUXDIR) M=$(PWD) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) modules CONFIG_BCMDHD=m CONFIG_BCMDHD_SDIO=y CONFIG_BCMDHD_OOB=y
+	$(MAKE) -C $(LINUXDIR) M=$(PWD) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) modules CONFIG_BCMDHD=m
 
 bcmdhd_usb:
 	$(warning "building BCMDHD_USB..........")
-	$(MAKE) -C $(LINUXDIR) M=$(PWD) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) modules CONFIG_BCMDHD=m CONFIG_BCMDHD_USB=y CONFIG_BCMDHD_OOB=y
+	$(MAKE) -C $(LINUXDIR) M=$(PWD) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) modules CONFIG_BCMDHD=m
 
 clean:
 	rm -rf *.o *.ko *.mod.c *~ .*.cmd *.o.cmd .*.o.cmd *.mod \

@@ -1,1 +1,0 @@
-cmd_drivers/net/wireless/bcmdhd/built-in.o :=  rm -f drivers/net/wireless/bcmdhd/built-in.o; /home/rently/imgDeps/zlink/code/xgcc/gcc-linaro-5.4.1-2017.05-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-ar rcsD drivers/net/wireless/bcmdhd/built-in.o
