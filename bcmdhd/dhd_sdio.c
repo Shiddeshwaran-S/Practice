@@ -8157,7 +8157,6 @@ dhdsdio_probe_attach(struct dhd_bus *bus, osl_t *osh, void *sdh, void *regsva,
 		bus->sih->socitype, bus->sih->chip, bus->sih->chiprev, bus->sih->chippkg));
 #endif /* DHD_DEBUG */
 
-	printf("chip:0x%4x\n", bus->sih->chip);
 
 	bcmsdh_chipinfo(sdh, bus->sih->chip, bus->sih->chiprev);
 

@@ -19,28 +19,15 @@
 extern void *dhd_wlan_mem_prealloc(int section, unsigned long size);
 #endif /* CONFIG_DHD_USE_STATIC_BUF */
 
-#ifdef BCMDHD_DTS
-/* This is sample code in dts file.
-bcmdhd {
-	compatible = "android,bcmdhd_wlan";
-	gpio_wl_reg_on = <&gpio GPIOH_4 GPIO_ACTIVE_HIGH>;
-	gpio_wl_host_wake = <&gpio GPIOZ_15 GPIO_ACTIVE_HIGH>;
-};
-*/
-#define DHD_DT_COMPAT_ENTRY		"android,bcmdhd_wlan"
-#define GPIO_WL_REG_ON_PROPNAME		"gpio_wl_reg_on"
-#define GPIO_WL_HOST_WAKE_PROPNAME	"gpio_wl_host_wake"
+#ifdef CUSTOMER_HW_ALLWINNER
+extern int wifi_pm_gpio_ctrl(char* name, int level);
+extern void sunximmc_rescan_card(unsigned id, unsigned insert);
+extern void wifi_pm_power(int on);
 #endif
 
 static int gpio_wl_reg_on = -1; // WL_REG_ON is input pin of WLAN module
 #ifdef CUSTOMER_OOB
 static int gpio_wl_host_wake = -1; // WL_HOST_WAKE is output pin of WLAN module
-#endif
-
-#ifdef CUSTOMER_HW_ALLWINNER
-static int sdc_id = 2;
-extern void sunximmc_rescan_card(unsigned id, unsigned insert);
-//extern void wifi_pm_power(int on);
 #endif
 
 static int
@@ -62,7 +49,7 @@ dhd_wlan_set_power(int on
 			}
 		}
 #ifdef CUSTOMER_HW_ALLWINNER
-//		wifi_pm_power(1);
+		wifi_pm_power(1);
 #endif
 #if defined(BUS_POWER_RESTORE)
 #if defined(BCMSDIO) && (LINUX_VERSION_CODE < KERNEL_VERSION(4, 19, 0))
@@ -115,7 +102,7 @@ dhd_wlan_set_power(int on
 			}
 		}
 #ifdef CUSTOMER_HW_ALLWINNER
-//		wifi_pm_power(0);
+		wifi_pm_power(0);
 #endif
 	}
 
@@ -130,7 +117,11 @@ static int dhd_wlan_set_reset(int onoff)
 static int dhd_wlan_set_carddetect(int present)
 {
 	int err = 0;
+#ifdef CUSTOMER_HW_PLATFORM
+	static int sdc_id = 3;
+#endif
 
+#if !defined(BUS_POWER_RESTORE)
 	if (present) {
 #if defined(BCMSDIO)
 		printf("======== Card detection to detect SDIO card! ========\n");
@@ -156,6 +147,7 @@ static int dhd_wlan_set_carddetect(int present)
 		printf("======== Card detection to remove PCIE card! ========\n");
 #endif
 	}
+#endif /* BUS_POWER_RESTORE */
 
 	return err;
 }
@@ -261,10 +253,6 @@ struct wifi_platform_data dhd_wlan_control = {
 
 int dhd_wlan_init_gpio(void)
 {
-#ifdef BCMDHD_DTS
-	char *wlan_node = DHD_DT_COMPAT_ENTRY;
-	struct device_node *root_node = NULL;
-#endif
 	int err = 0;
 #ifdef CUSTOMER_OOB
 	int host_oob_irq = -1;
@@ -274,22 +262,10 @@ int dhd_wlan_init_gpio(void)
 	/* Please check your schematic and fill right GPIO number which connected to
 	* WL_REG_ON and WL_HOST_WAKE.
 	*/
-#ifdef BCMDHD_DTS
-	root_node = of_find_compatible_node(NULL, NULL, wlan_node);
-	if (root_node) {
-		printf("======== Get GPIO from DTS ========\n");
-		gpio_wl_reg_on = of_get_named_gpio(root_node, GPIO_WL_REG_ON_PROPNAME, 0);
+	gpio_wl_reg_on = -1;
 #ifdef CUSTOMER_OOB
-		gpio_wl_host_wake = of_get_named_gpio(root_node, GPIO_WL_HOST_WAKE_PROPNAME, 0);
+	gpio_wl_host_wake = -1;
 #endif
-	} else
-#endif
-	{
-		gpio_wl_reg_on = -1;
-#ifdef CUSTOMER_OOB
-		gpio_wl_host_wake = -1;
-#endif
-	}
 
 	if (gpio_wl_reg_on >= 0) {
 		err = gpio_request(gpio_wl_reg_on, "WL_REG_ON");
