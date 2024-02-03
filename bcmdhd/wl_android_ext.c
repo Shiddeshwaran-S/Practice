@@ -4523,20 +4523,6 @@ wl_ext_iapsta_mesh_creating(struct net_device *net)
 }
 #endif /* WL_CFG80211 */
 
-static void
-wl_ext_net_setcarrier(struct net_device *ndev, bool on)
-{
-	AEXT_TRACE(ndev->name, "carrier=%d\n", on);
-
-	if (on) {
-		if (!netif_carrier_ok(ndev))
-			netif_carrier_on(ndev);
-	} else {
-		if (netif_carrier_ok(ndev))
-			netif_carrier_off(ndev);
-	}
-}
-
 int
 wl_ext_in4way_sync_sta(dhd_pub_t *dhd, struct wl_if_info *cur_if,
 	uint action, enum wl_ext_status status, void *context)
@@ -4657,7 +4643,6 @@ wl_ext_in4way_sync_sta(dhd_pub_t *dhd, struct wl_if_info *cur_if,
 			else if (cur_if->ifmode == IGC_MODE) {
 				dhd_conf_set_mchan_bw(dhd, WL_P2P_IF_CLIENT, -1);
 			}
-			wl_ext_net_setcarrier(cur_if->dev, TRUE);
 			break;
 		case WL_EXT_STATUS_DISCONNECTED:
 			if (cur_eapol_status >= EAPOL_STATUS_4WAY_START &&
@@ -4683,7 +4668,6 @@ wl_ext_in4way_sync_sta(dhd_pub_t *dhd, struct wl_if_info *cur_if,
 				osl_do_gettimeofday(sta_disc_ts);
 			}
 			wake_up_interruptible(&dhd->conf->event_complete);
-			wl_ext_net_setcarrier(cur_if->dev, FALSE);
 			break;
 		case WL_EXT_STATUS_ADD_KEY:
 			cur_if->eapol_status = EAPOL_STATUS_4WAY_DONE;
@@ -5139,7 +5123,6 @@ wl_ext_iapsta_attach_netdev(struct net_device *net, int ifidx, uint8 bssidx)
 		mutex_init(&cur_if->pm_sync);
 		INIT_DELAYED_WORK(&cur_if->pm_enable_work, wl_ext_pm_work_handler);
 	}
-	netif_carrier_off(net);
 
 	return 0;
 }
@@ -5179,7 +5162,6 @@ wl_ext_iapsta_dettach_netdev(struct net_device *net, int ifidx)
 #endif /* WLMESH && WL_ESCAN */
 		memset(cur_if, 0, sizeof(struct wl_if_info));
 	}
-	wl_ext_net_setcarrier(net, FALSE);
 
 	return 0;
 }

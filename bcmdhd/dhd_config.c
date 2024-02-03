@@ -86,12 +86,12 @@ const cihp_name_map_t chip_name_map[] = {
 	/* ChipID			Chiprev	AG	 	ChipName	ModuleName  */
 #ifdef BCMSDIO
 	{BCM43362_CHIP_ID,	0,	DONT_CARE,	"bcm40181a0",		""},
-	{BCM43362_CHIP_ID,	1,	DONT_CARE,	"bcm40181a2",		"ap6210"},
-	{BCM4330_CHIP_ID,	4,	FW_TYPE_G,	"bcm40183b2",		"ap6493"},
+	{BCM43362_CHIP_ID,	1,	DONT_CARE,	"bcm40181a2",		""},
+	{BCM4330_CHIP_ID,	4,	FW_TYPE_G,	"bcm40183b2",		""},
 	{BCM4330_CHIP_ID,	4,	FW_TYPE_AG,	"bcm40183b2_ag",	""},
-	{BCM43430_CHIP_ID,	0,	DONT_CARE,	"bcm43438a0",		"ap6212"},
-	{BCM43430_CHIP_ID,	1,	DONT_CARE,	"bcm43438a1",		"ap6212a"},
-	{BCM43430_CHIP_ID,	2,	DONT_CARE,	"bcm43436b0",		"ap6236"},
+	{BCM43430_CHIP_ID,	0,	DONT_CARE,	"bcm43438a0",		""},
+	{BCM43430_CHIP_ID,	1,	DONT_CARE,	"bcm43438a1",		""},
+	{BCM43430_CHIP_ID,	2,	DONT_CARE,	"bcm43436b0",		""},
 	{BCM43012_CHIP_ID,	1,	FW_TYPE_G,	"bcm43013b0",		""},
 	{BCM43012_CHIP_ID,	1,	FW_TYPE_AG,	"bcm43013c0_ag",	""},
 	{BCM43012_CHIP_ID,	2,	DONT_CARE,	"bcm43013c1_ag",	""},
@@ -2052,9 +2052,7 @@ dhd_conf_get_disable_proptx(dhd_pub_t *dhd)
 	  * 	   if you would like to disable it, please set disable_proptx=1 in config.txt
 	  * 3th: disable when proptxstatus not support in wl cap
 	  */
-	if (conf->chip == BCM4330_CHIP_ID) {
-		fw_proptx = 1;
-	} else if (FW_SUPPORTED(dhd, proptxstatus)) {
+	if (FW_SUPPORTED(dhd, proptxstatus)) {
 		fw_proptx = 1;
 	} else if (conf->chip == BCM4334_CHIP_ID || conf->chip == BCM43340_CHIP_ID ||
 			dhd->conf->chip == BCM43340_CHIP_ID || conf->chip == BCM4324_CHIP_ID) {

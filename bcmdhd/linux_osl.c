@@ -51,7 +51,7 @@
 #include <dngl_stats.h>
 #include <dhd.h>
 #if (LINUX_VERSION_CODE <= KERNEL_VERSION(4, 8, 0))
-#include <linux/pci-dma-compat.h>
+#include <asm-generic/pci-dma-compat.h>
 #endif
 
 
